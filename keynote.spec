@@ -13,6 +13,7 @@ Patch0:		keynote_2.3-11.diff.bz2
 BuildRequires:	openssl-devel
 BuildRequires:	flex
 BuildRequires:	bison
+BuildRoot:      %{_tmppath}/%{name}-%{version}-root
 
 %description
 The KeyNote architecture and language are useful as building blocks for the
