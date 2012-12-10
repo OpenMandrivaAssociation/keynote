@@ -4,7 +4,7 @@
 Summary:	Decentralized Trust-Management system
 Name:		keynote
 Version:	2.3
-Release:	%mkrel 6
+Release:	6
 License:	BSD
 Group:		System/Libraries
 URL:		http://www.cis.upenn.edu/~keynote/
@@ -13,7 +13,7 @@ Patch0:		keynote_2.3-11.diff.bz2
 BuildRequires:	openssl-devel
 BuildRequires:	flex
 BuildRequires:	bison
-BuildRoot:      %{_tmppath}/%{name}-%{version}-root
+
 
 %description
 The KeyNote architecture and language are useful as building blocks for the
@@ -56,23 +56,10 @@ KeyNote library in own applications.
 make CFLAGS="%{optflags} -Wall"
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
 %makeinstall_std
 
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
-
-%clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %files
-%defattr(0644,root,root,0755)
 %doc AUTHORS COPYING HOWTO.add.crypto LICENSE README TODO doc/rfc*.txt
 %attr(0755,root,root) %{_bindir}/keynote
 %{_mandir}/man1/*
@@ -80,14 +67,13 @@ make CFLAGS="%{optflags} -Wall"
 %{_mandir}/man5/*
 
 %files -n %{libname}
-%defattr(-,root,root)
 %{_libdir}/lib*.so.*
 
 %files -n %{libname}-devel
-%defattr(-,root,root)
 %{_libdir}/lib*.so
 %{_libdir}/lib*.a
-%{_libdir}/lib*.la
 %{_includedir}/*.*
 %{_mandir}/man3/*
+
+
 
