@@ -4,7 +4,7 @@
 Summary:	Decentralized Trust-Management system
 Name:		keynote
 Version:	2.3
-Release:	6
+Release:	7
 License:	BSD
 Group:		System/Libraries
 URL:		http://www.cis.upenn.edu/~keynote/
