@@ -7,7 +7,7 @@ Version:	2.3
 Release:	7
 License:	BSD
 Group:		System/Libraries
-URL:		http://www.cis.upenn.edu/~keynote/
+URL:		https://www.cis.upenn.edu/~keynote/
 Source0:	http://www.cis.upenn.edu/~keynote/Code/keynote-%{version}.tar.bz2
 Patch0:		keynote_2.3-11.diff.bz2
 BuildRequires:	openssl-devel
