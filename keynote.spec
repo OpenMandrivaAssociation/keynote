@@ -10,6 +10,11 @@ Group:		System/Libraries
 URL:		https://www.cis.upenn.edu/~keynote/
 Source0:	http://www.cis.upenn.edu/~keynote/Code/keynote-%{version}.tar.bz2
 Patch0:		keynote_2.3-11.diff.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	openssl-devel
 BuildRequires:	flex
 BuildRequires:	bison
